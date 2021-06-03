@@ -90,8 +90,3 @@ merg_extra_expanded2 = pd.merge(merg_reg_expanded, Expanded_II_df, on=['PLAYER']
 
 
 merg_extra_expanded2.to_csv(r'/mnt/g/programing_projects/UFMBA_stats/PGA_2020_Stats.csv', index = False, sep=',', encoding='utf-8')
-
-    
-
-
-
