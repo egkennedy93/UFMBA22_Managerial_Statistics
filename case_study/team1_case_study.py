@@ -1,10 +1,11 @@
 import pandas as pd
 import numpy as np
 from sklearn import linear_model
-import os
+import os, sys
 
 
 dirpath = os.path.dirname(os.path.realpath(__file__))
+
 
 # This is the file that will return all of the answers for the case project
 def question_1():
@@ -63,7 +64,7 @@ def question_1():
 
 def question_2():
     
-    # Question 1
+    # Question 2
     print("QUESTION 2")
     print("========================================")
     # this will utilize the WAGE2.XLS file
@@ -85,8 +86,11 @@ def question_2():
 
 
 
-
-
-
-# print(question_1())
-print(question_2())
+# printing results to results.txt file
+original_stdout = sys.stdout
+with open(dirpath+'/results.txt', 'w') as f:
+    sys.stdout = f
+    print(question_1())
+    print("\n")
+    print(question_2())
+    sys.stdout = original_stdout
