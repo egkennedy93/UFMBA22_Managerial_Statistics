@@ -48,28 +48,27 @@ def question_1():
     # Question  1 part III
     print("Question 1, Part III")
     print("simple regression result")
+    print("\n")
 
     # independent variable
-    x = df['ceoten'].to_numpy().reshape((-1,1))
-    y = np.log(df['salary'].to_numpy())
+    x = df['ceoten'].values.reshape(-1,1)
+    y = np.log(df['salary'].values)
     
+
     model = LinearRegression().fit(x, y)
     r_sq = model.score(x, y)
     
     #intercept is b0
     print('intercept: {}'.format(model.intercept_))
-    print("\n")
 
     # b1 is the predicted response per x
     print('slope: {}'.format(model.coef_[0]))
-    print("\n")
 
 
     print('r_squared: {}'.format(r_sq))
     print("\n")
 
-    print('predicted percentage increase given one more year as CEO: {} %'.format(np.round(model.coef_[0], decimals=6)*100))
-    print("\n")
+    print('predicted percentage increase given one more year as CEO: {} %'.format(model.predict(x)[:1]))
     
     
 
@@ -97,6 +96,7 @@ def question_2():
 
     print("IQ Standard deviation")
     print(df['IQ'].std())
+    print("\n")
 
     #Question 2, part2
     print("Question 2, Part II")
@@ -104,14 +104,18 @@ def question_2():
 
     x = df['IQ'].to_numpy().reshape((-1,1))
     y = df['wage'].to_numpy()
-
     model = LinearRegression().fit(x, y)
-    r_sq = model.score(np.log(x), y)
-    intercept = model.intercept_
-    coef = model.coef_[0]
-    print(r_sq)
-    print(intercept)
-    print(coef)
+    r_sq = model.score(x, y)
+
+    #intercept is b0
+    print('intercept: {}'.format(model.intercept_))
+
+    # b1 is the predicted response per x
+    print('slope: {}'.format(model.coef_[0]))
+
+
+    print('r_squared: {}'.format(r_sq))
+   
 
     
 
@@ -130,8 +134,7 @@ def question_2():
 #     print("\n")
 #     print(question_2())
 #     sys.stdout = original_stdout
-print(question_2())
+print(question_1())
 
 
 
-# %%
