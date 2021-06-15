@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -5,6 +6,7 @@ import os, sys
 
 
 dirpath = os.path.dirname(os.path.realpath(__file__))
+#dirpath = os.path.dirname(os.path.realpath('/mnt/g/programing_projects/UFMBA_stats/UFMBA22_Managerial_Statistics/case_study'))
 
 
 # This is the file that will return all of the answers for the case project
@@ -56,15 +58,19 @@ def question_1():
     
     #intercept is b0
     print('intercept: {}'.format(model.intercept_))
+    print("\n")
 
     # b1 is the predicted response per x
     print('slope: {}'.format(model.coef_[0]))
+    print("\n")
+
 
     print('r_squared: {}'.format(r_sq))
+    print("\n")
 
     print('predicted percentage increase given one more year as CEO: {} %'.format(np.round(model.coef_[0], decimals=6)*100))
+    print("\n")
     
-    y_pred = model.predict(x)
     
 
 
@@ -78,6 +84,9 @@ def question_2():
     df = pd.read_excel(dirpath+'/WAGE2.xls')
 
     # Question 2, part I
+    print("Question 2, Part I")
+    print("\n")
+
     print("Average salary ")
     print(df['lwage'].mean())
     print("\n")
@@ -89,7 +98,28 @@ def question_2():
     print("IQ Standard deviation")
     print(df['IQ'].std())
 
+    #Question 2, part2
+    print("Question 2, Part II")
+    print("\n")
 
+    x = df['IQ'].to_numpy().reshape((-1,1))
+    y = df['wage'].to_numpy()
+
+    model = LinearRegression().fit(x, y)
+    r_sq = model.score(np.log(x), y)
+    intercept = model.intercept_
+    coef = model.coef_[0]
+    print(r_sq)
+    print(intercept)
+    print(coef)
+
+    
+
+# df.plot(x='IQ', y='wage', style='o')
+# plt.title('IQ VS Wage')
+# plt.xlabel('IQ')
+# plt.ylabel('wage')
+# plt.show()
 
 
 # printing results to results.txt file
@@ -100,4 +130,8 @@ def question_2():
 #     print("\n")
 #     print(question_2())
 #     sys.stdout = original_stdout
-print(question_1())
+print(question_2())
+
+
+
+# %%
