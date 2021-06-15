@@ -23,10 +23,11 @@ def scrape_table_urls():
     return table_urls
 
 
-menu_dict = scrape_table_urls()
+
 
 # used to build all of the different URLS for the different tabs
 def tab_selector(menu_key_name):
+    menu_dict = scrape_table_urls()
     url_endpoint = menu_dict[menu_key_name]
     url = "https://www.pgatour.com{}".format(str(url_endpoint))
     return url
