@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn import linear_model
+from sklearn.linear_model import LinearRegression
 import os, sys
 
 
@@ -44,22 +44,28 @@ def question_1():
     print("\n")
 
     # Question  1 part III
+    print("Question 1, Part III")
     print("simple regression result")
 
     # independent variable
-    x = df
-    # dependent variable
-    y = df['lsalary']
+    x = df['ceoten'].to_numpy().reshape((-1,1))
+    y = np.log(df['salary'].to_numpy())
     
-    # building model
-    lm = linear_model.LinearRegression()
-    model = lm.fit(x,y)
+    model = LinearRegression().fit(x, y)
+    r_sq = model.score(x, y)
+    
+    #intercept is b0
+    print('intercept: {}'.format(model.intercept_))
 
-    #predicting the value
-    predictions = lm.predict(x)
+    # b1 is the predicted response per x
+    print('slope: {}'.format(model.coef_[0]))
 
-    print(model)
-    print(predictions)
+    print('r_squared: {}'.format(r_sq))
+
+    print('predicted percentage increase given one more year as CEO: {} %'.format(np.round(model.coef_[0], decimals=6)*100))
+    
+    y_pred = model.predict(x)
+    
 
 
 def question_2():
@@ -87,10 +93,11 @@ def question_2():
 
 
 # printing results to results.txt file
-original_stdout = sys.stdout
-with open(dirpath+'/results.txt', 'w') as f:
-    sys.stdout = f
-    print(question_1())
-    print("\n")
-    print(question_2())
-    sys.stdout = original_stdout
+# original_stdout = sys.stdout
+# with open(dirpath+'/results.txt', 'w') as f:
+#     sys.stdout = f
+#     print(question_1())
+#     print("\n")
+#     print(question_2())
+#     sys.stdout = original_stdout
+print(question_1())
