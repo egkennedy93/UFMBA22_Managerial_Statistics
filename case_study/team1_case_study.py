@@ -72,6 +72,7 @@ def question_1():
     print("\n")
 
     print('predicted percentage increase given one more year as CEO: {} %'.format(model.predict(np.arange(1).reshape(1,-1))))
+    return " "
     
 
 
@@ -136,10 +137,10 @@ def question_2():
 
     predicted_values = log_model.predict(np.arange(16).reshape(-1,1))
     print('a 15 pt increase in IQ will increase wage by a percent of: {}'.format(predicted_values[15]))
-    print("\n")
+    return " "
 
 def question_3():
-
+    print("building data....")
     df = pd.read_excel(dirpath+'/hprice1.xls')
     y = df['price'].values.reshape(-1,1)
     x_values_df = df.filter(['sqrft', 'bdrms']).values
@@ -169,6 +170,7 @@ def question_3():
     print(adjusted_b_1)
     print("adding 140 sqrft, increased the price by an additional compared to part II\n{}".format(adjusted_b_1 - b_2))
     # Question 3 Part IV
+    print("question 3 Part IV")
     print("IDK")
     # Question 3 Part V
     print("Question 3 Part V")
@@ -178,6 +180,7 @@ def question_3():
     print("Question 3 part VI")
     print("Predicted: {} Actual:{} \nresidual:  {}".format(predicted_val, 300, np.round(predicted_val - 300, decimals=4)))
     print("\n")
+    return " "
 
 def question_4():
     df = pd.read_excel(dirpath+'/ATTEND.xls')
@@ -207,17 +210,23 @@ def question_4():
 # plt.xlabel('IQ')
 # plt.ylabel('wage')
 # plt.show()
+    return " "
 
 
-# printing results to results.txt file
-# original_stdout = sys.stdout
-# with open(dirpath+'/results.txt', 'w') as f:
-#     sys.stdout = f
-#     print(question_1())
-#     print("\n")
-#     print(question_2())
-#     sys.stdout = original_stdout
-print(question_4())
+#printing results to results.txt file
+original_stdout = sys.stdout
+with open(dirpath+'/results.txt', 'w') as f:
+    sys.stdout = f
+    print(question_1())
+    print("\n")
+    print(question_2())
+    print("\n")
+    print(question_3())
+    print("\n")
+    print(question_4())
+    sys.stdout = original_stdout
+
+# print(question_4())
 
 
 

@@ -1,0 +1,116 @@
+QUESTION 1
+========================================
+Question 1, Part I
+Average salary
+6.5828475601929055
+
+
+Average tenure
+7.954802259887006
+
+
+Question 1, Part II
+how many CEOs are in their first year as CEO?
+5
+
+
+What is the longest tenure as a CEO
+37
+
+
+Question 1, Part III
+simple regression result
+
+
+intercept: 6.505497982134362
+slope: 0.009723631971106584
+r_squared: 0.01316251774366084
+
+
+predicted percentage increase given one more year as CEO: [6.50549798] %
+ 
+
+
+QUESTION 2
+========================================
+Question 2, Part I
+
+
+Average salary 
+957.9454545454546
+
+
+Average IQ
+101.28235294117647
+
+
+IQ Standard deviation
+15.052636370265098
+
+
+Question 2, Part II
+
+
+intercept: 116.99156478556881
+slope: 8.30306430823444
+r_squared: 0.09553528456778482
+1 pt increase in IQ will increase wage by: 125.29462909380325
+a 15 pt increase in IQ will increase wage by: 241.5375294090854
+
+
+Question 2, Part III
+
+
+intercept: 5.886994353922074
+slope: 0.00880715576896705
+r_squared: 0.0990912847549944
+a 15 pt increase in IQ will increase wage by a percent of: 6.01910169045658
+ 
+
+
+building data....
+rsquared: 0.6319184011671723
+intercept: -19.314995765184904
+sqrft slope: 0.12843621036829206
+bdrms slope: 15.19819096782205
+
+
+Question 3 Part I
+y= -19.315 + 0.1284sqrft + 15.1982bdrms + u
+Question 3 Part II
+Price increase when 1 bedroom is added, holding sqrft constant:
+15.1982
+Question 3 Part III
+what is the estimated increase in price for a house with an additional bedroom that is 140sqrft in size
+29.0625
+adding 140 sqrft, increased the price by an additional compared to part II
+13.8643
+question 3 Part IV
+IDK
+Question 3 Part V
+354.6052
+Question 3 part VI
+Predicted: 354.6052 Actual:300 
+residual:  54.6052
+
+
+ 
+
+
+Question 4 Part I
+the min, max, and mean for atndrte, priGPA, and ACT are:
+
+         atndrte    priGPA        ACT
+mean   81.709559  2.586775  22.510294
+min     6.250000  0.857000  13.000000
+max   100.000000  3.930000  32.000000
+
+
+Question 4 Part II
+0.29058148401574935
+intercept: 75.70040486231385
+priGPA slope: 17.260591059550283
+ACT slope: -1.716552936136729
+
+
+ 
