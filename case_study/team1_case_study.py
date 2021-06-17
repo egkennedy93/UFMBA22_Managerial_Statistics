@@ -68,8 +68,7 @@ def question_1():
     print('r_squared: {}'.format(r_sq))
     print("\n")
 
-    print('predicted percentage increase given one more year as CEO: {} %'.format(model.predict(x)[:1]))
-    
+    print('predicted percentage increase given one more year as CEO: {} %'.format(model.predict(np.arange(1).reshape(1,-1))))
     
 
 
@@ -87,7 +86,7 @@ def question_2():
     print("\n")
 
     print("Average salary ")
-    print(df['lwage'].mean())
+    print(df['wage'].mean())
     print("\n")
 
     print("Average IQ")
@@ -112,9 +111,55 @@ def question_2():
 
     # b1 is the predicted response per x
     print('slope: {}'.format(model.coef_[0]))
-
-
     print('r_squared: {}'.format(r_sq))
+
+    predicted_values = model.predict(np.arange(16).reshape(-1,1))
+    print('1 pt increase in IQ will increase wage by: {}'.format(predicted_values[1]))
+    print('a 15 pt increase in IQ will increase wage by: {}'.format(predicted_values[15]))
+    print("\n")
+
+    print("Question 2, Part III")
+    print("\n")
+    y_log = df['lwage'].to_numpy()
+    log_model = LinearRegression().fit(x, y_log)
+    log_r_sq = log_model.score(x, y_log)
+
+    #intercept is b0
+    print('intercept: {}'.format(log_model.intercept_))
+
+    # b1 is the predicted response per x
+    print('slope: {}'.format(log_model.coef_[0]))
+    print('r_squared: {}'.format(log_r_sq))
+
+    predicted_values = log_model.predict(np.arange(16).reshape(-1,1))
+    print('a 15 pt increase in IQ will increase wage by a percent of: {}'.format(predicted_values[15]))
+    print("\n")
+
+def question_3():
+
+    df = pd.read_excel(dirpath+'/hprice1.xls')
+    y = df['price'].values.reshape(-1,1)
+    x_values_df = df.filter(['sqrft', 'bdrms']).values
+    model = LinearRegression().fit(x_values_df, y)
+    r_sq = model.score(x_values_df, y)
+    #intercept is b0
+    print('intercept: {}'.format(model.intercept_))
+
+    # b1 is the predicted response per x
+    print('sqrft slope: {}'.format(model.coef_[0][0]))
+    print('bdrms slope: {}'.format(model.coef_[0][1]))
+    print("\n")
+
+
+    # print('r_squared: {}'.format(r_sq))
+    # print("\n")
+
+    # # Question 3 part I
+    print("Question 3 Part I")
+    print("\n")
+    print('y= {} + {}sqrft + {}bdrms + u'.format(np.round(model.intercept_[0],decimals=4),
+                                                  np.round(model.coef_[0][0],decimals=4), 
+                                                  np.round(model.coef_[0][1],decimals=4)))
    
 
     
@@ -134,7 +179,7 @@ def question_2():
 #     print("\n")
 #     print(question_2())
 #     sys.stdout = original_stdout
-print(question_1())
+print(question_3())
 
 
 
