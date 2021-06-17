@@ -1,7 +1,10 @@
 
 import pandas as pd
 import numpy as np
+from pandas.core.frame import DataFrame, Series
+import sklearn
 from sklearn.linear_model import LinearRegression
+from sklearn import metrics
 import os, sys
 
 
@@ -141,28 +144,63 @@ def question_3():
     y = df['price'].values.reshape(-1,1)
     x_values_df = df.filter(['sqrft', 'bdrms']).values
     model = LinearRegression().fit(x_values_df, y)
-    r_sq = model.score(x_values_df, y)
+    #r-squared
+    print('rsquared: {}'.format(model.score(x_values_df, y)))
     #intercept is b0
-    print('intercept: {}'.format(model.intercept_))
-
+    print('intercept: {}'.format(model.intercept_[0]))
     # b1 is the predicted response per x
     print('sqrft slope: {}'.format(model.coef_[0][0]))
     print('bdrms slope: {}'.format(model.coef_[0][1]))
     print("\n")
-
-
-    # print('r_squared: {}'.format(r_sq))
-    # print("\n")
-
     # # Question 3 part I
     print("Question 3 Part I")
-    print("\n")
-    print('y= {} + {}sqrft + {}bdrms + u'.format(np.round(model.intercept_[0],decimals=4),
-                                                  np.round(model.coef_[0][0],decimals=4), 
-                                                  np.round(model.coef_[0][1],decimals=4)))
-   
+    b_0 = np.round(model.intercept_[0],decimals=4)
+    b_1 = np.round(model.coef_[0][0],decimals=4)
+    b_2 = np.round(model.coef_[0][1],decimals=4)
 
+    print('y= {} + {}sqrft + {}bdrms + u'.format(b_0, b_1, b_2))
+    # Question 3 Part II
+    print("Question 3 Part II")
+    print('Price increase when 1 bedroom is added, holding sqrft constant:\n{}'.format(b_2))
+    # Question 3 Part III
+    print("Question 3 Part III")
+    print("what is the estimated increase in price for a house with an additional bedroom that is 140sqrft in size")
+    adjusted_b_1 = np.round(model.predict([[140,2]])[0][0], decimals=4)
+    print(adjusted_b_1)
+    print("adding 140 sqrft, increased the price by an additional compared to part II\n{}".format(adjusted_b_1 - b_2))
+    # Question 3 Part IV
+    print("IDK")
+    # Question 3 Part V
+    print("Question 3 Part V")
+    predicted_val = np.round(model.predict([[2438, 4]])[0][0], decimals=4)
+    print(predicted_val)
+    # Question 3 Part VI
+    print("Question 3 part VI")
+    print("Predicted: {} Actual:{} \nresidual:  {}".format(predicted_val, 300, np.round(predicted_val - 300, decimals=4)))
+    print("\n")
+
+def question_4():
+    df = pd.read_excel(dirpath+'/ATTEND.xls')
+
+    # Question 4 Part I
+    print("Question 4 Part I")
+    print("the min, max, and mean for atndrte, priGPA, and ACT are:\n")
+    print(df[['atndrte', 'priGPA', 'ACT']].describe().loc[['mean', 'min','max']])
+    print("\n")
     
+    # Question 4 part II
+    print("Question 4 Part II")
+    y = df['atndrte'].values.reshape(-1,1)
+    x = df.filter(['priGPA', 'ACT']).values
+    model = LinearRegression().fit(x,y)
+    print(model.score(x,y))
+
+    #intercept is b0
+    print('intercept: {}'.format(model.intercept_[0]))
+    # b1 is the predicted response per x
+    print('priGPA slope: {}'.format(model.coef_[0][0]))
+    print('ACT slope: {}'.format(model.coef_[0][1]))
+    print("\n")
 
 # df.plot(x='IQ', y='wage', style='o')
 # plt.title('IQ VS Wage')
@@ -179,7 +217,7 @@ def question_3():
 #     print("\n")
 #     print(question_2())
 #     sys.stdout = original_stdout
-print(question_3())
+print(question_4())
 
 
 
