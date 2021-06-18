@@ -74,8 +74,6 @@ def question_1():
     print('predicted percentage increase given one more year as CEO: {} %'.format(model.predict(np.arange(1).reshape(1,-1))))
     return " "
     
-
-
 def question_2():
     
     # Question 2
@@ -220,6 +218,10 @@ def question_4():
     print("Person A is predicted {} and person B is predicted {} for a difference of {}".format(person_A, person_B, person_A-person_B))
     return " "
 
+def question_5():
+    df = pd.read_excel(dirpath+'/MLB1.xls')
+    print(df)
+
 # df.plot(x='IQ', y='wage', style='o')
 # plt.title('IQ VS Wage')
 # plt.xlabel('IQ')
@@ -241,7 +243,7 @@ def question_4():
 #     print(question_4())
 #     sys.stdout = original_stdout
 
-print(question_4())
+print(question_5())
 
 
 
