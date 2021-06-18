@@ -162,7 +162,7 @@ def question_3():
     print('y= {} + {}sqrft + {}bdrms + u'.format(b_0, b_1, b_2))
     # Question 3 Part II
     print("Question 3 Part II")
-    print('Price increase when 1 bedroom is added, holding sqrft constant:\n{}'.format(b_2))
+    print('Price increase when 1 bedroom is added, holding sqrft constant:\n{}'.format(b_2*1000))
     # Question 3 Part III
     print("Question 3 Part III")
     print("what is the estimated increase in price for a house with an additional bedroom that is 140sqrft in size")
@@ -196,37 +196,52 @@ def question_4():
     y = df['atndrte'].values.reshape(-1,1)
     x = df.filter(['priGPA', 'ACT']).values
     model = LinearRegression().fit(x,y)
-    print(model.score(x,y))
+    r_sq=model.score(x,y)
+
+    intercept = np.round(model.intercept_[0],decimals=4) 
+    priGPA_coef = np.round(model.coef_[0][0],decimals=4)
+    ACT_coef = np.round(model.coef_[0][1],decimals=4)
 
     #intercept is b0
-    print('intercept: {}'.format(model.intercept_[0]))
+    print('intercept: {}'.format(intercept))
     # b1 is the predicted response per x
-    print('priGPA slope: {}'.format(model.coef_[0][0]))
-    print('ACT slope: {}'.format(model.coef_[0][1]))
+    print('priGPA slope: {}'.format(priGPA_coef))
+    print('ACT slope: {}'.format(ACT_coef))
     print("\n")
+    print('y={} + {}priGPA {}ACT + u'.format(intercept, priGPA_coef, ACT_coef))
+    print("regardless of any coefficent, a student will have a atndrte of {}".format(intercept))
+    print("\n")
+
+    # Question 4 Part III
+    print("Question 4 part III")
+    person_predicted = np.round(model.predict([[3.1,21],[2.1,26]]),decimals=4)
+    person_A = person_predicted[0][0]
+    person_B = person_predicted[1][0]
+    print("Person A is predicted {} and person B is predicted {} for a difference of {}".format(person_A, person_B, person_A-person_B))
+    return " "
 
 # df.plot(x='IQ', y='wage', style='o')
 # plt.title('IQ VS Wage')
 # plt.xlabel('IQ')
 # plt.ylabel('wage')
 # plt.show()
-    return " "
+    
 
 
 #printing results to results.txt file
-original_stdout = sys.stdout
-with open(dirpath+'/results.txt', 'w') as f:
-    sys.stdout = f
-    print(question_1())
-    print("\n")
-    print(question_2())
-    print("\n")
-    print(question_3())
-    print("\n")
-    print(question_4())
-    sys.stdout = original_stdout
+# original_stdout = sys.stdout
+# with open(dirpath+'/results.txt', 'w') as f:
+#     sys.stdout = f
+#     print(question_1())
+#     print("\n")
+#     print(question_2())
+#     print("\n")
+#     print(question_3())
+#     print("\n")
+#     print(question_4())
+#     sys.stdout = original_stdout
 
-# print(question_4())
+print(question_4())
 
 
 
