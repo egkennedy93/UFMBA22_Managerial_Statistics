@@ -138,6 +138,8 @@ def question_2():
     return " "
 
 def question_3():
+    print("QUESTION 3")
+    print("========================================")
     print("building data....")
     df = pd.read_excel(dirpath+'/hprice1.xls')
     y = df['price'].values.reshape(-1,1)
@@ -181,6 +183,8 @@ def question_3():
     return " "
 
 def question_4():
+    print("QUESTION 4")
+    print("========================================")
     df = pd.read_excel(dirpath+'/ATTEND.xls')
 
     # Question 4 Part I
@@ -219,10 +223,37 @@ def question_4():
     return " "
 
 def question_5():
+    print("QUESTION 5")
+    print("========================================")
     df = pd.read_excel(dirpath+'/MLB1.xls')
-    print(df)
 
-# df.plot(x='IQ', y='wage', style='o')
+    # Question 5 part I
+    print("Question 5 Part I")
+    y = df['lsalary'].values.reshape(-1,1)
+    x = df.filter(['years', 'gamesyr','bavg', 'hrunsyr']).values
+    model = LinearRegression().fit(x,y)
+    print(model.coef_)
+    print(model.intercept_)
+
+
+    # Question 5 Part II
+    print("Question 5 part II")
+    new_x = df.filter(['years', 'gamesyr','bavg', 'hrunsyr', 'runsyr', 'fldperc', 'sbasesyr']).values
+    new_model = LinearRegression().fit(new_x, y)
+    print(new_model.coef_)
+
+    # Question 5 Part III
+    print("Question 5 part III")
+
+# import pandas as pd
+# import numpy as np
+# from pandas.core.frame import DataFrame, Series
+# import sklearn
+# from sklearn.linear_model import LinearRegression
+# from sklearn import metrics
+# import os, sys
+
+# df.plot(x=['years', 'gamesyr','bavg', 'hrunsyr', 'runsyr', 'fldperc', 'sbasesyr'], y='wage', style='o')
 # plt.title('IQ VS Wage')
 # plt.xlabel('IQ')
 # plt.ylabel('wage')
@@ -230,20 +261,22 @@ def question_5():
     
 
 
-#printing results to results.txt file
-# original_stdout = sys.stdout
-# with open(dirpath+'/results.txt', 'w') as f:
-#     sys.stdout = f
-#     print(question_1())
-#     print("\n")
-#     print(question_2())
-#     print("\n")
-#     print(question_3())
-#     print("\n")
-#     print(question_4())
-#     sys.stdout = original_stdout
+# printing results to results.txt file
+original_stdout = sys.stdout
+with open(dirpath+'/results.txt', 'w') as f:
+    sys.stdout = f
+    print(question_1())
+    print("\n")
+    print(question_2())
+    print("\n")
+    print(question_3())
+    print("\n")
+    print(question_4())
+    print("\n")
+    print(question_5())
+    sys.stdout = original_stdout
 
-print(question_5())
+# print(question_5())
 
 
 
