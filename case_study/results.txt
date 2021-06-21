@@ -1,32 +1,23 @@
 QUESTION 1
 ========================================
 Question 1, Part I
+========================================
 Average salary
 6.5828475601929055
-
-
 Average tenure
 7.954802259887006
-
-
 Question 1, Part II
+========================================
 how many CEOs are in their first year as CEO?
 5
-
-
 What is the longest tenure as a CEO
 37
-
-
 Question 1, Part III
+========================================
 simple regression result
-
-
 intercept: 6.505497982134362
-slope: 0.009723631971106584
-r_squared: 0.01316251774366084
-
-
+slope: 0.00972363197110659
+r_squared: 0.013162517743660396
 predicted percentage increase given one more year as CEO: [6.50549798] %
  
 
@@ -34,33 +25,22 @@ predicted percentage increase given one more year as CEO: [6.50549798] %
 QUESTION 2
 ========================================
 Question 2, Part I
-
-
+========================================
 Average salary 
 957.9454545454546
-
-
 Average IQ
 101.28235294117647
-
-
 IQ Standard deviation
 15.052636370265098
-
-
 Question 2, Part II
-
-
+========================================
 intercept: 116.99156478556881
 slope: 8.30306430823444
 r_squared: 0.09553528456778482
 1 pt increase in IQ will increase wage by: 125.29462909380325
 a 15 pt increase in IQ will increase wage by: 241.5375294090854
-
-
 Question 2, Part III
-
-
+========================================
 intercept: 5.886994353922074
 slope: 0.00880715576896705
 r_squared: 0.0990912847549944
@@ -71,27 +51,31 @@ a 15 pt increase in IQ will increase wage by a percent of: 6.01910169045658
 QUESTION 3
 ========================================
 building data....
-rsquared: 0.6319184011671723
+rsquared: 0.6319184011671725
 intercept: -19.314995765184904
 sqrft slope: 0.12843621036829206
 bdrms slope: 15.19819096782205
-
-
 Question 3 Part I
-y= -19.315 + 0.1284sqrft + 15.1982bdrms + u
+========================================
+y=-19314.9958 + 128.4362sqrft + 15198.191bdrms + u
 Question 3 Part II
+========================================
 Price increase when 1 bedroom is added, holding sqrft constant:
-15198.2
+-3988.3686
 Question 3 Part III
+========================================
 what is the estimated increase in price for a house with an additional bedroom that is 140sqrft in size
-29.0625
+13864.2647
 adding 140 sqrft, increased the price by an additional compared to part II
-13.8643
+17852.6333
 question 3 Part IV
-IDK
+========================================
+0.6319184011671725
 Question 3 Part V
+========================================
 354.6052
 Question 3 part VI
+========================================
 Predicted: 354.6052 Actual:300 
 residual:  54.6052
 
@@ -102,6 +86,7 @@ residual:  54.6052
 QUESTION 4
 ========================================
 Question 4 Part I
+========================================
 the min, max, and mean for atndrte, priGPA, and ACT are:
 
          atndrte    priGPA        ACT
@@ -111,6 +96,7 @@ max   100.000000  3.930000  32.000000
 
 
 Question 4 Part II
+========================================
 intercept: 75.7004
 priGPA slope: 17.2606
 ACT slope: -1.7166
@@ -121,6 +107,7 @@ regardless of any coefficent, a student will have a atndrte of 75.7004
 
 
 Question 4 part III
+========================================
 Person A is predicted 93.1606 and person B is predicted 67.3173 for a difference of 25.8433
  
 
@@ -128,10 +115,13 @@ Person A is predicted 93.1606 and person B is predicted 67.3173 for a difference
 QUESTION 5
 ========================================
 Question 5 Part I
+========================================
 [[0.06773248 0.01575946 0.00141852 0.0359434 ]]
 [11.0209124]
 Question 5 part II
+========================================
 [[ 0.06998478  0.00789952  0.00052964  0.0232106   0.01739218  0.00103508
   -0.00641911]]
 Question 5 part III
+========================================
 None
