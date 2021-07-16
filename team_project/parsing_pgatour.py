@@ -71,8 +71,26 @@ def parse_menu(endpoint, data_name):
 
 
 if __name__ == '__main__':
+    #selecting which menu to use
     off_the_tee_urls = tab_sub_menu_urls('off the tee', '2020')
-    t2g_data = parse_menu(off_the_tee_urls['CLUB HEAD SPEED'], 'club_head_speed')
+    
+    # this is parsing the menus
+    longest_drive = parse_menu(off_the_tee_urls['LONGEST DRIVES'], 'longest_drives')
+    Driving_distance = parse_menu(off_the_tee_urls['DRIVING DISTANCE'], 'driving_distance')
 
-    print(t2g_data)    
+
+    #RADAR Data
+    chs_data = parse_menu(off_the_tee_urls['CLUB HEAD SPEED'], 'club_head_speed')
+    ball_speed = parse_menu(off_the_tee_urls['BALL SPEED'], 'ball_speed')
+    smash_factor = parse_menu(off_the_tee_urls['SMASH FACTOR'], 'smash_factor')
+    launch_angle = parse_menu(off_the_tee_urls['LAUNCH ANGLE'], 'launch_angle')
+    spin_rate = parse_menu(off_the_tee_urls['SPIN RATE'], 'spin_rate')
+    distance_to_apex = parse_menu(off_the_tee_urls['DISTANCE TO APEX'], 'distance_to_apex')
+    apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
+    hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
+    carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
+    carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
+    
+
+
     # print(off_the_tee_urls)

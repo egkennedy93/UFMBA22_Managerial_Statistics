@@ -25,6 +25,7 @@ def espn_scrape():
         for player in players:
             # for each stat value found, grab the text value
             stats = [stat.get_text() for stat in player.find_all('td')]
+            print(stats)
 
             # transposing the rows and columns
             player_df = DataFrame(stats).transpose()
