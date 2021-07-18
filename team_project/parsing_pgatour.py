@@ -4,11 +4,9 @@ This file is intended to be used for parsing out all of the stats on pgatour.com
 """
 import numpy as np
 import pandas as pd
-import re
 import requests
 from bs4 import BeautifulSoup
 from pandas import DataFrame
-import re
 
 
 def scrape_table_urls():
@@ -64,12 +62,12 @@ def parse_menu(endpoint, data_name):
         holder.append([stat.get_text().strip('\n\s') for stat in golfer.find_all('td')])
     golfer_df = DataFrame(holder)
     golfer_df.columns = columns
-    golfer_df.replace
-    golfer_df['RANK THIS WEEK'] = np.where(golfer_df['stream'] == 2, 10,20)
+    # golfer_df.replace
+    # golfer_df['RANK THIS WEEK'] = np.where(golfer_df['stream'] == 2, 10,20)
 
 
-    # save_path = '/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/PGA_stats_{}.csv'.format(data_name)
-    # golfer_df.to_csv(save_path, index = False, sep=',', encoding='utf-8')
+    save_path = '/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/PGA_stats_{}.csv'.format(data_name)
+    golfer_df.to_csv(save_path, index = False, sep=',', encoding='utf-8')
     return golfer_df
 
 
@@ -85,16 +83,13 @@ if __name__ == '__main__':
 
     #RADAR Data
     chs_data = parse_menu(off_the_tee_urls['CLUB HEAD SPEED'], 'club_head_speed')
-    # ball_speed = parse_menu(off_the_tee_urls['BALL SPEED'], 'ball_speed')
-    # smash_factor = parse_menu(off_the_tee_urls['SMASH FACTOR'], 'smash_factor')
-    # launch_angle = parse_menu(off_the_tee_urls['LAUNCH ANGLE'], 'launch_angle')
-    # spin_rate = parse_menu(off_the_tee_urls['SPIN RATE'], 'spin_rate')
-    # distance_to_apex = parse_menu(off_the_tee_urls['DISTANCE TO APEX'], 'distance_to_apex')
-    # apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
-    # hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
-    # carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
-    # carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
+    ball_speed = parse_menu(off_the_tee_urls['BALL SPEED'], 'ball_speed')
+    smash_factor = parse_menu(off_the_tee_urls['SMASH FACTOR'], 'smash_factor')
+    launch_angle = parse_menu(off_the_tee_urls['LAUNCH ANGLE'], 'launch_angle')
+    spin_rate = parse_menu(off_the_tee_urls['SPIN RATE'], 'spin_rate')
+    distance_to_apex = parse_menu(off_the_tee_urls['DISTANCE TO APEX'], 'distance_to_apex')
+    apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
+    hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
+    carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
+    carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
     
-
-
-    print(chs_data)
