@@ -25,7 +25,6 @@ def espn_scrape():
         for player in players:
             # for each stat value found, grab the text value
             stats = [stat.get_text() for stat in player.find_all('td')]
-            print(stats)
 
             # transposing the rows and columns
             player_df = DataFrame(stats).transpose()
@@ -89,9 +88,12 @@ def espn_scrape():
 
 
     merg_reg_expanded = pd.merge(reg_df, Expanded_I_df, on=['PLAYER'])
-    merg_extra_expanded2 = pd.merge(merg_reg_expanded, Expanded_II_df, on=['PLAYER'])
+    merg_extra_expanded2 = pd.merge(Expanded_II_df, merg_reg_expanded, on=['PLAYER'])
 
 
-    merg_extra_expanded2.to_csv(r'/mnt/g/programing_projects/UFMBA_stats/PGA_2020_Stats.csv', index = False, sep=',', encoding='utf-8')
+    merg_extra_expanded2.to_csv(r'/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/PGA_2020_Stats.csv', index = False, sep=',', encoding='utf-8')
+    
+    return merg_extra_expanded2
 
+   
 espn_scrape()

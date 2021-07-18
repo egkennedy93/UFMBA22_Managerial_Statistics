@@ -1,4 +1,4 @@
-RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUNDS,AVG.,TOTAL DISTANCE,TOTAL DRIVES
+RANK THIS WEEK,                                RANK LAST WEEK,PLAYER,ROUNDS,AVG.,TOTAL DISTANCE,TOTAL DRIVES
         1,        1,Bryson DeChambeau,62,322.1,"39,945",124
         2,        2,Cameron Champ,70,322.0,"45,082",140
         3,        3,Ryan Brehm,52,315.3,"31,527",100
@@ -8,8 +8,8 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         7,        7,Jason Kokrak,62,312.4,"33,743",108
         8,        8,Sam Burn,60,312.0,"36,197",116
         9,        9,Matthew Wolff,74,311.6,"41,135",132
-        T10,        10,Bubba Watson,66,311.0,"36,072",116
         T10,        11,Dustin Johnson,49,311.0,"30,477",98
+        T10,        10,Bubba Watson,66,311.0,"36,072",116
         12,        12,Tyler McCumber,57,310.2,"32,884",106
         13,        T13,Tony Finau,72,309.8,"39,655",128
         14,        T13,Tommy Fleetwood,40,309.6,"17,337",56
@@ -26,8 +26,8 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         25,        25,Brooks Koepka,40,307.0,"23,332",76
         26,        26,Beau Hossler,71,306.6,"41,091",134
         27,        28,Sergio Garcia,44,305.8,"19,573",64
-        T28,        T29,Byeong Hun An,75,305.7,"38,518",126
         T28,        T29,Kris Ventura,48,305.7,"26,905",88
+        T28,        T29,Byeong Hun An,75,305.7,"38,518",126
         T30,        33,Gary Woodland,62,305.4,"32,983",108
         T30,        T31,Xander Schauffele,70,305.4,"37,868",124
         32,        T34,Wyndham Clark,65,305.1,"32,336",106
@@ -47,16 +47,16 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         T45,        T47,Martin Trainer,48,302.1,"27,795",92
         T47,        T49,Danny Lee,69,302.0,"36,840",122
         T47,        T49,Adam Schenk,78,302.0,"39,860",132
-        T49,        T51,Cameron Tringale,63,301.9,"38,044",126
         T49,        T51,Harold Varner III,74,301.9,"39,856",132
         T49,        T51,Keith Mitchell,64,301.9,"33,812",112
+        T49,        T51,Cameron Tringale,63,301.9,"38,044",126
         52,        54,Peter Uihlein,47,301.8,"25,951",86
         T53,        T59,Joaquin Niemann,76,301.7,"41,034",136
         T53,        55,Matt Wallace,44,301.7,"24,138",80
-        T55,        T56,Lucas Glover,67,301.6,"33,181",110
         T55,        T56,Zack Sucher,38,301.6,"21,712",72
         T55,        T56,Jordan Spieth,62,301.6,"30,162",100
         T55,        73,Tyrrell Hatton,42,301.6,"20,510",68
+        T55,        T56,Lucas Glover,67,301.6,"33,181",110
         T59,        T59,Phil Mickelson,51,301.5,"25,929",86
         T59,        T59,Aaron Wise,49,301.5,"27,137",90
         61,        T62,Danny Willett,40,301.2,"19,277",64
@@ -65,8 +65,8 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         T63,        T65,Harry Higg,83,301.0,"49,974",166
         T65,        T62,Harris English,76,300.9,"45,732",152
         T65,        67,Vincent Whaley,40,300.9,"22,872",76
-        T67,        T69,Kevin Chappell,41,300.6,"24,649",82
         T67,        T69,Max Homa,70,300.6,"37,270",124
+        T67,        T69,Kevin Chappell,41,300.6,"24,649",82
         69,        T71,Sungjae Im,94,300.5,"49,276",164
         70,        T71,Carlos Ortiz,72,300.3,"43,247",144
         71,        68,Daniel Berger,64,300.2,"36,025",120
@@ -75,29 +75,29 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         74,        75,Jason Day,53,299.7,"26,976",90
         75,        76,Justin Rose,38,299.6,"20,373",68
         76,        79,Shane Lowry,44,299.4,"21,556",72
+        T77,        80,Joseph Bramlett,57,299.3,"31,727",106
         T77,        T82,Ryan Palmer,68,299.3,"35,910",120
         T77,        T77,Billy Horschel,79,299.3,"40,107",134
-        T77,        80,Joseph Bramlett,57,299.3,"31,727",106
         T77,        81,Viktor Hovland,74,299.3,"39,512",132
         81,        T82,Dominic Bozzelli,38,299.0,"21,531",72
-        T82,        T85,Mackenzie Hughe,70,298.7,"41,821",140
         T82,        84,Corey Conner,74,298.7,"37,043",124
+        T82,        T85,Mackenzie Hughe,70,298.7,"41,821",140
         84,        T85,Michael Gligic,52,298.4,"28,645",96
         T85,        T87,Nelson Ledesma,42,298.2,"23,852",80
         T85,        T87,Talor Gooch,83,298.2,"49,505",166
-        T87,        T89,Si Woo Kim,78,298.1,"39,348",132
         T87,        T89,Richy Werenski,60,298.1,"33,391",112
+        T87,        T89,Si Woo Kim,78,298.1,"39,348",132
         89,        91,Jimmy Walker,46,298.0,"27,418",92
         90,        93,Rhein Gibson,54,297.8,"29,783",100
         91,        94,Sam Ryder,74,297.7,"41,682",140
-        T92,        T95,D.J. Trahan,49,297.6,"27,972",94
         T92,        T95,Scott Stalling,71,297.6,"39,873",134
+        T92,        T95,D.J. Trahan,49,297.6,"27,972",94
         94,        92,Abraham Ancer,74,297.5,"36,896",124
         T95,        T97,J.J. Spaun,62,297.4,"34,498",116
         T95,        T97,Doc Redman,82,297.4,"48,773",164
+        T97,        102,Collin Morikawa,80,297.3,"42,816",144
         T97,        T99,Matt Jone,76,297.3,"42,817",144
         T97,        T99,Branden Grace,43,297.3,"21,999",74
-        T97,        102,Collin Morikawa,80,297.3,"42,816",144
         100,        101,Scott Piercy,66,297.2,"34,473",116
         T101,        T103,Nick Taylor,59,296.6,"34,999",118
         T101,        T103,Robby Shelton,75,296.6,"42,111",142
@@ -107,16 +107,16 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         106,        T108,Russell Knox,67,296.3,"37,339",126
         107,        T108,Webb Simpson,52,296.2,"30,800",104
         T108,        T110,Alex Noren,60,296.0,"33,153",112
-        T108,        116,Patrick Reed,74,296.0,"39,073",132
         T108,        T110,Chesson Hadley,62,296.0,"31,969",108
+        T108,        116,Patrick Reed,74,296.0,"39,073",132
         T108,        T110,Doug Ghim,44,296.0,"23,676",80
         112,        T110,Marc Leishman,61,295.8,"31,359",106
         T113,        T114,Stewart Cink,51,295.7,"30,163",102
         T113,        T114,Emiliano Grillo,69,295.7,"33,713",114
         115,        117,Joel Dahmen,79,295.4,"41,944",142
         116,        118,Ben Taylor,44,295.2,"24,798",84
-        T117,        T119,Cameron Percy,49,295.0,"26,553",90
         T117,        T119,Matthew NeSmith,72,295.0,"40,117",136
+        T117,        T119,Cameron Percy,49,295.0,"26,553",90
         119,        121,Rickie Fowler,44,294.9,"25,949",88
         120,        122,Patton Kizzire,55,294.8,"32,425",110
         T121,        T123,Bo Hoag,71,294.7,"39,488",134
@@ -129,11 +129,11 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         T127,        T129,Adam Hadwin,65,294.0,"33,511",114
         129,        131,Kevin Streelman,73,293.9,"38,213",130
         T130,        T132,Xinjun Zhang,77,293.8,"42,894",146
-        T130,        T132,Austin Cook,64,293.8,"35,255",120
         T130,        T132,Denny McCarthy,81,293.8,"45,240",154
-        T133,        T135,Rafa Cabrera Bello,53,293.7,"24,081",82
+        T130,        T132,Austin Cook,64,293.8,"35,255",120
         T133,        T135,James Hahn,36,293.7,"21,145",72
         T133,        T135,Robert Streb,54,293.7,"29,369",100
+        T133,        T135,Rafa Cabrera Bello,53,293.7,"24,081",82
         136,        138,Michael Gellerman,46,293.5,"24,656",84
         137,        139,Mark Anderson,51,293.1,"27,549",94
         138,        140,Brian Harman,78,293.0,"45,715",156
@@ -153,21 +153,21 @@ RANK THIS WEEK,                                RANK LAST WEEK,PLAYER NAME,ROUND
         152,        155,Pat Perez,59,290.3,"27,292",94
         T153,        T156,"Ted Potter, Jr.",46,290.2,"25,537",88
         T153,        T156,J.T. Poston,78,290.2,"40,628",140
-        T155,        T158,Russell Henley,67,290.1,"36,549",126
         T155,        T158,Mark Hubbard,86,290.1,"49,893",172
+        T155,        T158,Russell Henley,67,290.1,"36,549",126
         157,        160,Ryan Moore,48,289.9,"20,872",72
         158,        161,Andrew Landry,63,289.7,"36,505",126
         159,        162,Chris Baker,53,289.5,"28,368",98
-        T160,        T163,Fabián Gómez,59,289.2,"31,816",110
         T160,        165,Kevin Kisner,73,289.2,"37,600",130
-        T162,        T167,Brian Gay,67,288.5,"36,351",126
-        T162,        T167,Brandt Snedeker,53,288.5,"30,586",106
+        T160,        T163,Fabián Gómez,59,289.2,"31,816",110
         T162,        T167,Scott Brown,64,288.5,"36,934",128
+        T162,        T167,Brandt Snedeker,53,288.5,"30,586",106
+        T162,        T167,Brian Gay,67,288.5,"36,351",126
         165,        T170,Michael Thompson,62,288.4,"35,759",124
         166,        172,Peter Malnati,61,287.6,"32,791",114
-        T167,        T174,Chris Stroud,48,287.0,"26,407",92
-        T167,        T174,Nate Lashley,52,287.0,"26,977",94
         T167,        T174,C.T. Pan,56,287.0,"27,550",96
+        T167,        T174,Nate Lashley,52,287.0,"26,977",94
+        T167,        T174,Chris Stroud,48,287.0,"26,407",92
         170,        173,Kevin Na,71,286.9,"36,151",126
         171,        177,Ian Poulter,48,286.8,"21,797",76
         172,        178,Arjun Atwal,35,286.5,"17,760",62
