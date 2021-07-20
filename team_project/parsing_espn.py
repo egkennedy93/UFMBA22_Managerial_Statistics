@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -8,7 +9,7 @@ from pandas import DataFrame
 def espn_scrape():
     # parent data from for the default page
     reg_df = pd.DataFrame()
-    for i in range(1,882, 40):
+    for i in range(1,193, 40):
         url = "https://www.espn.com/golf/statistics/_/year/2020/count/{}".format(i)
         pga_tour_stats = requests.get(url)
         soup = BeautifulSoup(pga_tour_stats.text, 'html.parser')
@@ -31,7 +32,6 @@ def espn_scrape():
             player_df.columns = columns
             # players_with_earnings = player_df.query('EARNINGS != "--"')
             reg_df = pd.concat([reg_df, player_df], ignore_index=True)
-
 
     # parent data frame for the Expanded I page
     Expanded_I_df = pd.DataFrame()
@@ -88,11 +88,14 @@ def espn_scrape():
 
 
     merg_reg_expanded = pd.merge(reg_df, Expanded_I_df, on=['PLAYER'])
-    merg_extra_expanded2 = pd.merge(Expanded_II_df, merg_reg_expanded, on=['PLAYER'])
+    merg_extra_expanded2 = pd.merge(merg_reg_expanded, Expanded_II_df, on=['PLAYER'])
+    sorted_df = merg_extra_expanded2
+    sorted_df['AGE'].replace(['--', '', ' '], np.nan, inplace=True)
+    sorted_df.dropna(subset=['AGE'], inplace=True)
 
 
 
-    merg_extra_expanded2.to_csv(r'/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/PGA_2020_Stats.csv', index = False, sep=',', encoding='utf-8')
+    sorted_df.to_csv(r'/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/ESPN_2020_Stats.csv', index=False, sep=',', encoding='utf-8-sig')
     
     return merg_extra_expanded2
 
