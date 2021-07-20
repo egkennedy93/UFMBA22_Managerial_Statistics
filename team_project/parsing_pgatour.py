@@ -74,7 +74,7 @@ def parse_menu(endpoint, data_name):
     # grabbing the column headers
     raw_header = soup.find('thead')
     # grabbing column values
-    columns = [col.get_text().strip().replace("xa0", "") for col in raw_header.find_all('th')]
+    columns = [col.get_text() for col in raw_header.find_all('th')]
     # parse golfers
     golfers = soup.find('tbody')
     
@@ -86,14 +86,14 @@ def parse_menu(endpoint, data_name):
     golfer_df = DataFrame(holder)
     golfer_df.columns = columns
     golfer_df.rename(columns={'PLAYER NAME': "PLAYER"}, inplace=True)
-    del golfer_df['RANK THIS WEEK', 'RANK LAST WEEK']
-    
+    del golfer_df['\n                                RANK LAST WEEK']
+    del golfer_df['RANK\xa0THIS WEEK']
     save_path = '/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/PGA_stats_{}.csv'.format(data_name)
-    golfer_df.to_csv(save_path, index = False, sep=',', encoding='utf-8')
+    golfer_df.to_csv(save_path, index = False, sep=',', encoding='utf-8-sig')
     return golfer_df
 
 
-#selecting which menu to use
+# #selecting which menu to use
 off_the_tee_urls = tab_sub_menu_urls('off the tee', '2020')
 
 # this is parsing the menus
@@ -112,3 +112,5 @@ apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
 hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
 carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
 carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
+
+

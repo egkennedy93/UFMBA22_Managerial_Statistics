@@ -91,6 +91,7 @@ def espn_scrape():
     merg_extra_expanded2 = pd.merge(Expanded_II_df, merg_reg_expanded, on=['PLAYER'])
 
 
+
     merg_extra_expanded2.to_csv(r'/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/PGA_2020_Stats.csv', index = False, sep=',', encoding='utf-8')
     
     return merg_extra_expanded2
