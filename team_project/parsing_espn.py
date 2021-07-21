@@ -92,12 +92,20 @@ def espn_scrape():
     sorted_df = merg_extra_expanded2
     sorted_df['AGE'].replace(['--', '', ' '], np.nan, inplace=True)
     sorted_df.dropna(subset=['AGE'], inplace=True)
+    
+    #fixing iregularities in the earnings data
+    sorted_df['EARNINGS'] = sorted_df['EARNINGS'].str.replace('$','', regex=True)
+    sorted_df['EARNINGS'] = sorted_df['EARNINGS'].str.replace(',','', regex=True)
+    sorted_df['EARNINGS'] = pd.to_numeric(sorted_df['EARNINGS'])
+    sorted_df['RK'] = pd.to_numeric(sorted_df['RK'])
+
+    sorted_df.sort_values('EARNINGS')
 
 
 
     sorted_df.to_csv(r'/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/ESPN_2020_Stats.csv', index=False, sep=',', encoding='utf-8-sig')
     
-    return merg_extra_expanded2
+    return sorted_df
 
    
 espn_scrape()

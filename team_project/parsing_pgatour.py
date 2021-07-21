@@ -82,10 +82,24 @@ def parse_menu(endpoint, data_name):
     # parses through each golfer found
     for golfer in golfers.find_all('tr'):
         # for each golfer found 
-        holder.append([stat.get_text().strip('\t\n\s') for stat in golfer.find_all('td')])
+        holder.append([stat.get_text().strip('\t\n') for stat in golfer.find_all('td')])
     golfer_df = DataFrame(holder)
     golfer_df.columns = columns
+
+    new_avg = "{}_AVG".format(data_name)
+    new_round = "{}_ROUNDS".format(data_name)
+    new_fast_speed = "{}_FASTEST SPEED".format(data_name)
+    new_slow_speed = "{}_SLOWEST SPEED".format(data_name)
+    new_total_attempts = "{}_TOTAL ATTEMPTS".format(data_name)
     golfer_df.rename(columns={'PLAYER NAME': "PLAYER"}, inplace=True)
+    golfer_df.rename(columns={'AVG.': new_avg.upper()}, inplace=True)
+    golfer_df.rename(columns={'ROUNDS': new_round.upper()}, inplace=True)
+    golfer_df.rename(columns={'FASTEST SPEED': new_fast_speed.upper()}, inplace=True)
+    golfer_df.rename(columns={'SLOWEST SPEED': new_slow_speed.upper()}, inplace=True)
+    golfer_df.rename(columns={'TOTAL ATTEMPTS_x': new_total_attempts.upper()}, inplace=True)
+    
+    golfer_df.rename(columns={'TOTAL ATTEMPTS': new_total_attempts.upper()}, inplace=True)
+
     del golfer_df['\n                                RANK LAST WEEK']
     del golfer_df['RANK\xa0THIS WEEK']
     save_path = '/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/PGA_stats_{}.csv'.format(data_name)
@@ -112,5 +126,3 @@ apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
 hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
 carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
 carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
-
-
