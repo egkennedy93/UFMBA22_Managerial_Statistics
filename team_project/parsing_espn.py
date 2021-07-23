@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 import requests
+import os
 from bs4 import BeautifulSoup
 from pandas import DataFrame
 
@@ -102,8 +103,8 @@ def espn_scrape():
     sorted_df.sort_values('EARNINGS')
 
 
-
-    sorted_df.to_csv(r'/home/egkennedy93/programming_projects/UFMBA22_Managerial_Statistics/team_project/DataSets/ESPN_2020_Stats.csv', index=False, sep=',', encoding='utf-8-sig')
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    sorted_df.to_csv(dir_path+'/DataSets/ESPN_2020_Stats.csv', index=False, sep=',', encoding='utf-8-sig')
     
     return sorted_df
 

@@ -61,7 +61,7 @@ y=-19314.9958 + 128.4362sqrft + 15198.191bdrms + u
 Question 3 Part II
 ========================================
 Price increase when 1 bedroom is added, holding sqrft constant:
--3988.3686
+15198.191
 Question 3 Part III
 ========================================
 what is the estimated increase in price for a house with an additional bedroom that is 140sqrft in size

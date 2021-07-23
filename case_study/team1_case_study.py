@@ -157,7 +157,7 @@ def question_3():
     print("Question 3 Part II")
     print("========================================")
     q3_p2 = np.round(model.predict([[1,1]])[0][0]*1000, decimals=4)
-    print('Price increase when 1 bedroom is added, holding sqrft constant:\n{}'.format(q3_p2))
+    print('Price increase when 1 bedroom is added, holding sqrft constant:\n{}'.format(b_2))
     # Question 3 Part III
     print("Question 3 Part III")
     print("========================================")
