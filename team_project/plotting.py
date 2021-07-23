@@ -25,7 +25,7 @@ import seaborn as sns
 
 plot_df = merging_datasets.final_merge
 
-val = 'AGE'
+val = 'PUTTING FROM - 20-25\'_% MADE'
 
 plot_df[val] = pd.to_numeric(plot_df[val])
 ax = sns.scatterplot(data = plot_df, y='EARNINGS', x=val, hue='PLAYER', palette='rocket')

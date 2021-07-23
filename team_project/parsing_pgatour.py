@@ -92,14 +92,23 @@ def parse_menu(endpoint, data_name):
     new_round = "{}_ROUNDS".format(data_name)
     new_fast_speed = "{}_FASTEST SPEED".format(data_name)
     new_slow_speed = "{}_SLOWEST SPEED".format(data_name)
+    new_percent = "{}_%".format(data_name)
+    new_percent_made = "{}_% MADE".format(data_name)
+    new_attempts = "{}_ATTEMPTS".format(data_name)
+    new_putts_made = "{}_PUTTS_MADE".format(data_name)
     new_total_attempts = "{}_TOTAL ATTEMPTS".format(data_name)
+    
+
     golfer_df.rename(columns={'PLAYER NAME': "PLAYER"}, inplace=True)
     golfer_df.rename(columns={'AVG.': new_avg.upper()}, inplace=True)
     golfer_df.rename(columns={'ROUNDS': new_round.upper()}, inplace=True)
     golfer_df.rename(columns={'FASTEST SPEED': new_fast_speed.upper()}, inplace=True)
     golfer_df.rename(columns={'SLOWEST SPEED': new_slow_speed.upper()}, inplace=True)
     golfer_df.rename(columns={'TOTAL ATTEMPTS_x': new_total_attempts.upper()}, inplace=True)
-    
+    golfer_df.rename(columns={'%': new_percent.upper()}, inplace=True)
+    golfer_df.rename(columns={'ATTEMPTS': new_attempts.upper()}, inplace=True)
+    golfer_df.rename(columns={'PUTTS MADE': new_putts_made.upper()}, inplace=True)
+    golfer_df.rename(columns={'% MADE': new_percent_made.upper()}, inplace=True)
     golfer_df.rename(columns={'TOTAL ATTEMPTS': new_total_attempts.upper()}, inplace=True)
 
     del golfer_df['\n                                RANK LAST WEEK']
@@ -110,27 +119,31 @@ def parse_menu(endpoint, data_name):
     return golfer_df
 
 
-# # #selecting which menu to use
-# off_the_tee_urls = tab_sub_menu_urls('off the tee', '2020')
-
-# # this is parsing the menus
-# longest_drive = parse_menu(off_the_tee_urls['LONGEST DRIVES'], 'longest_drives')
-# Driving_distance = parse_menu(off_the_tee_urls['DRIVING DISTANCE'], 'driving_distance')
-
-
-#RADAR Data
-# chs_data = parse_menu(off_the_tee_urls['CLUB HEAD SPEED'], 'club_head_speed')
-# ball_speed = parse_menu(off_the_tee_urls['BALL SPEED'], 'ball_speed')
-# smash_factor = parse_menu(off_the_tee_urls['SMASH FACTOR'], 'smash_factor')
-# launch_angle = parse_menu(off_the_tee_urls['LAUNCH ANGLE'], 'launch_angle')
-# spin_rate = parse_menu(off_the_tee_urls['SPIN RATE'], 'spin_rate')
-# distance_to_apex = parse_menu(off_the_tee_urls['DISTANCE TO APEX'], 'distance_to_apex')
-# apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
-# hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
-# carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
-# carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
-
+# #selecting which menu to use
+off_the_tee_urls = tab_sub_menu_urls('off the tee', '2020')
 putting_urls = tab_sub_menu_urls('putting', '2020')
-print(putting_urls['TOTAL 1 PUTTS - INSIDE 5\''])
 
-inside_five = parse_menu(putting_urls['TOTAL 1 PUTTS - INSIDE 5\''], 'TOTAL 1 PUTTS - INSIDE 5\'')
+
+# this is parsing the menus
+longest_drive = parse_menu(off_the_tee_urls['LONGEST DRIVES'], 'longest_drives')
+Driving_distance = parse_menu(off_the_tee_urls['DRIVING DISTANCE'], 'driving_distance')
+
+
+# RADAR Data
+chs_data = parse_menu(off_the_tee_urls['CLUB HEAD SPEED'], 'club_head_speed')
+ball_speed = parse_menu(off_the_tee_urls['BALL SPEED'], 'ball_speed')
+smash_factor = parse_menu(off_the_tee_urls['SMASH FACTOR'], 'smash_factor')
+launch_angle = parse_menu(off_the_tee_urls['LAUNCH ANGLE'], 'launch_angle')
+spin_rate = parse_menu(off_the_tee_urls['SPIN RATE'], 'spin_rate')
+distance_to_apex = parse_menu(off_the_tee_urls['DISTANCE TO APEX'], 'distance_to_apex')
+apex_height = parse_menu(off_the_tee_urls['APEX HEIGHT'], 'apex_height')
+hang_time = parse_menu(off_the_tee_urls['HANG TIME'], 'hang_time')
+carry_distance = parse_menu(off_the_tee_urls['CARRY DISTANCE'], 'carry_distance')
+carry_efficiency = parse_menu(off_the_tee_urls['CARRY EFFICIENCY'], 'carry_efficiency')
+
+#PUTTING Data
+inside_5 = parse_menu(putting_urls['PUTTING FROM INSIDE 5\''], 'PUTTING FROM INSIDE INSIDE 5\'')
+inside_5_10 = parse_menu(putting_urls['PUTTING FROM 5-10\''], 'PUTTING FROM 5-10\'')
+inside_10_15 = parse_menu(putting_urls['PUTTING FROM - 10-15\''], 'PUTTING FROM - 10-15\'')
+inside_15_20 = parse_menu(putting_urls['PUTTING FROM - 15-20\''], 'PUTTING FROM - 15-20\'')
+inside_20_25 = parse_menu(putting_urls['PUTTING FROM - 20-25\''], 'PUTTING FROM - 20-25\'')
