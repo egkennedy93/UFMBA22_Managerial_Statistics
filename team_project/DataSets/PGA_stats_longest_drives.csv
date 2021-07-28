@@ -20,11 +20,11 @@ Joaquin Niemann,76,406,the Memorial,1,17,023
 Louis Oosthuizen,48,404,WGC-Mexico,4,4,240
 Scott Harrington,68,402,the Memorial,3,17,023
 Jordan Spieth,62,402,WGC-Mexico,4,4,240
+Matthew Wolff,74,400,the Memorial,1,17,023
 Gary Woodland,62,400,Sentry,4,12,656
 Ryan Fox,4,400,WGC-Mexico,1,2,240
 Adam Scott,38,400,WGC-Mexico,2,11,240
 Brandon Hagy,50,400,The Greenbrier,2,17,771
-Matthew Wolff,74,400,the Memorial,1,17,023
 Wyndham Clark,65,399,the Memorial,2,17,023
 Martin Trainer,48,397,Sentry,4,17,656
 Paul Casey,56,397,Sentry,1,12,656
@@ -52,11 +52,11 @@ Roger Sloan,55,387,Workday,3,1,893
 Sebastián Muñoz,84,386,the Memorial,4,17,023
 Tom Lewis,34,386,The Greenbrier,1,6,771
 Tyler McCumber,57,386,Rocket Mortgage,2,16,876
+Jarryd Dillas,2,385,Bermuda,2,2,765
 Max Homa,70,385,WGC-FedEx,2,7,513
 Patrick Reed,74,385,WGC-Mexico,4,12,240
 Bo Hoag,71,385,the Memorial,4,17,023
 Tommy Fleetwood,40,385,WGC-Mexico,4,11,240
-Jarryd Dillas,2,385,Bermuda,2,2,765
 Nate Lashley,52,384,Sentry,4,1,656
 Justin Harding,8,384,WGC-Mexico,2,11,240
 D.J. Trahan,49,384,The Greenbrier,2,6,771
@@ -146,14 +146,14 @@ Jonathan Byrd,29,368,The Greenbrier,3,12,771
 Sam Ryder,74,368,Workday,3,13,893
 Dominic Bozzelli,38,368,The Greenbrier,3,12,771
 Mark Hubbard,86,368,the Memorial,4,17,023
+Kenny Leseur,2,367,Bermuda,2,2,765
+Peter Kuest,12,367,the Memorial,1,13,023
 Ryan Moore,48,367,the Memorial,4,13,023
 Chez Reavie,77,367,WGC-Mexico,4,10,240
 Tiger Woods,28,367,the Memorial,4,13,023
 Russell Knox,67,367,Pebble Beach,3,9,005
 Brendan Steele,68,367,The Greenbrier,2,13,771
 Jamie Lovemark,28,367,The Greenbrier,1,12,771
-Kenny Leseur,2,367,Bermuda,2,2,765
-Peter Kuest,12,367,the Memorial,1,13,023
 Seamus Power,36,366,Wyndham,1,18,752
 Rob Oppenheim,65,366,Pebble Beach,4,9,005
 C.T. Pan,56,366,the Memorial,4,17,023
@@ -166,13 +166,13 @@ Michael Thompson,62,365,BMW Champ,1,10,896
 Adam Hadwin,65,365,the Memorial,4,13,023
 Peter Uihlein,47,365,Shriners,3,2,538
 Josh Teater,43,365,Wyndham,3,5,752
+James Nicholas,2,364,Rocket Mortgage,2,12,876
 Michael Gligic,52,364,Wyndham,4,5,752
 Rhein Gibson,54,364,Puerto Rico,3,2,742
 Christiaan Bezuidenhout,34,364,WGC-Mexico,2,14,240
-James Nicholas,2,364,Rocket Mortgage,2,12,876
+Will Gordon,36,363,Travelers,4,4,503
 Maverick McNealy,80,363,BMW Champ,1,17,896
 Denny McCarthy,81,363,Arnold Palmer,2,5,009
-Will Gordon,36,363,Travelers,4,4,503
 MJ Daffue,10,362,Workday,3,13,893
 Si Woo Kim,78,362,Rocket Mortgage,3,13,876
 Kevin Chappell,41,362,The Greenbrier,2,6,771
@@ -187,24 +187,26 @@ Austin Cook,64,361,The Greenbrier,3,17,771
 Ben Taylor,44,360,Wyndham,1,18,752
 Hank Lebioda,57,360,The Greenbrier,2,6,771
 Tom Hoge,74,360,Travelers,4,12,503
+Tony Romo,2,360,Safeway Open,2,4,552
+Shintaro Ban,2,360,The Greenbrier,2,6,771
 Lucas Bjerregaard,23,360,Shriners,2,13,538
 Zack Sucher,38,360,The Greenbrier,3,16,771
 Mark Anderson,51,360,The Greenbrier,4,6,771
 Troy Merritt,72,360,Wyndham,1,18,752
 Rafael Campos,29,360,The Greenbrier,2,6,771
 John Senden,33,360,Pebble Beach,3,9,005
-Shintaro Ban,2,360,The Greenbrier,2,6,771
-Tony Romo,2,360,Safeway Open,2,4,552
+Isaiah Salinda,16,359,Pebble Beach,1,10,769
+Andy Ogletree,6,359,the Memorial,1,17,023
 Cameron Percy,49,359,Bermuda,3,2,765
 Boo Weekley,14,359,The Greenbrier,2,6,771
 Russell Henley,67,359,BMW Champ,1,10,896
 Martin Laird,39,359,The Greenbrier,2,12,771
 Brendon Todd,86,359,Sentry,1,1,656
+Doc Redman,82,359,the Memorial,1,17,023
 Zac Blair,70,359,Pebble Beach,4,9,005
 Aaron Wise,49,359,Genesis,2,18,500
-Doc Redman,82,359,the Memorial,1,17,023
-Isaiah Salinda,16,359,Pebble Beach,1,10,769
-Andy Ogletree,6,359,the Memorial,1,17,023
+Angus Flanagan,2,358,3M Open,2,2,883
+Jack Trent,4,358,Shriners,3,2,538
 Jazz Janewattananond,30,358,WGC-Mexico,2,14,240
 Adam Schenk,78,358,Shriners,1,9,538
 Tomoyo Ikemura,2,358,Sony Open,1,16,006
@@ -212,8 +214,6 @@ Kyle Stanley,57,358,Wyndham,1,18,752
 "Ted Potter, Jr.",46,358,3M Open,2,15,883
 Alex Noren,60,358,Arnold Palmer,2,15,009
 Xinjun Zhang,77,358,the Memorial,3,17,023
-Angus Flanagan,2,358,3M Open,2,2,883
-Jack Trent,4,358,Shriners,3,2,538
 Vince Covello,22,357,The Greenbrier,4,12,771
 Nick Taylor,59,357,BMW Champ,1,10,896
 Michael Kim,26,357,The Greenbrier,2,6,771
@@ -238,13 +238,14 @@ Carl Pettersson,6,353,the Memorial,4,17,023
 Nick Watney,46,353,Safeway Open,2,1,552
 Daniel Chopra,16,353,3M Open,1,18,883
 Rod Pampling,11,353,Bermuda,3,2,765
+Akshay Bhatia,13,352,Shriners,2,2,538
 Alex Cejka,31,352,The Greenbrier,1,17,771
 Rafa Cabrera Bello,53,352,WGC-Mexico,3,14,240
 Zach Johnson,61,352,the Memorial,4,2,023
 Shawn Stefani,32,352,The Greenbrier,2,1,771
 Daniel Augustus IV,2,352,Bermuda,2,2,765
 Doug Ghim,44,352,The Greenbrier,3,6,771
-Akshay Bhatia,13,352,Shriners,2,2,538
+Mason Williams,2,351,The Greenbrier,1,6,771
 Davey Jude,2,351,The Greenbrier,2,7,771
 Brandon Wu,18,351,Workday,1,2,893
 Sahith Theegala,10,351,3M Open,2,15,883
@@ -252,17 +253,16 @@ Alex Smalley,2,351,Phoenix Open,2,17,510
 Andrew Landry,63,351,BMW Champ,1,1,896
 Chris Stroud,48,351,Rocket Mortgage,2,10,876
 Matt Every,47,351,The Greenbrier,2,12,771
-Mason Williams,2,351,The Greenbrier,1,6,771
 Bill Haas,46,350,Shriners,1,9,538
 Arjun Atwal,35,350,The Greenbrier,1,12,771
 Freddie Jacobson,10,350,The Greenbrier,1,6,771
 John Rollins,12,350,Bermuda,1,12,765
 Taylor Funk,2,350,Bermuda,2,2,765
+Jake Shuman,2,349,Wyndham,1,5,752
 Charley Hoffman,63,349,Safeway Open,1,1,552
 Ernie Els,6,349,the Memorial,1,17,023
 Brian Stuard,83,349,Sanderson Farms,2,18,746
 K.H. Lee,76,349,Arnold Palmer,2,16,009
-Jake Shuman,2,349,Wyndham,1,5,752
 Fabián Gómez,59,348,Bermuda,1,12,765
 John Merrick,18,348,Sanderson Farms,1,18,746
 Seung-Yul Noh,20,348,Workday,1,1,893
@@ -272,11 +272,11 @@ Nelson Ledesma,42,348,Safeway Open,1,5,552
 Parker McLachlin,16,347,3M Open,1,15,883
 Davis Love III,24,347,Workday,2,13,893
 Emiliano Grillo,69,347,Puerto Rico,3,2,742
+Davis Thompson,6,346,The RSM Classic,3,14,776
 Morgan Hoffmann,10,346,Safeway Open,2,1,552
 Andres Gonzales,2,346,Safeway Open,2,1,552
 John Daly,4,346,The Greenbrier,2,12,771
 Roberto Díaz,6,346,Bermuda,1,12,765
-Davis Thompson,6,346,The RSM Classic,3,14,776
 Peter Malnati,61,345,Safeway Open,1,16,552
 John Oda,8,345,Shriners,4,2,538
 Chase Koepka,14,345,3M Open,1,18,883
@@ -288,8 +288,9 @@ Sangmoon Bae,24,345,The Greenbrier,2,6,771
 John Huh,26,344,Phoenix Open,2,15,510
 Chris Baker,53,344,Pebble Beach,4,10,005
 Tim Herron,15,344,3M Open,2,12,883
-Charlie Reiter,3,344,The Amex,1,13,202
 Dylan Wu,2,344,Shriners,2,13,538
+Charlie Reiter,3,344,The Amex,1,13,202
+Patrick Martin,5,343,Farmers,2,18,104
 Trey Mullinax,6,343,Phoenix Open,2,18,510
 David Pastore,2,343,Travelers,1,7,503
 Rikuya Hoshino,8,343,Sony Open,3,18,006
@@ -297,7 +298,6 @@ Conrad Shindler,2,343,The Greenbrier,2,13,771
 Greg Chalmers,22,343,Wyndham,1,18,752
 Ian Poulter,48,343,the Memorial,1,1,023
 Charlie Beljan,5,343,Bermuda,1,12,765
-Patrick Martin,5,343,Farmers,2,18,104
 Roberto Castro,31,342,The Greenbrier,4,12,771
 Luke Donald,34,342,Rocket Mortgage,1,17,876
 Wesley Bryan,16,342,Wyndham,1,18,752
@@ -312,35 +312,35 @@ Ben Martin,38,340,Wyndham,1,18,752
 Jared Sawada,2,340,Sony Open,1,5,006
 Henry Chung,4,340,Safeway Open,1,1,552
 Chip McDaniel,6,340,Bermuda,3,12,765
+Hayden Buckley,4,339,Honda Classic,2,3,734
 Chan Kim,10,339,PGA Champ,1,4,895
 Steve Stricker,32,339,the Memorial,1,2,023
 K.J. Choi,25,339,Pebble Beach,2,9,005
-Hayden Buckley,4,339,Honda Classic,2,3,734
+Jake Kneen,2,338,3M Open,2,12,883
 Johnson Wagner,27,338,Pebble Beach,1,10,769
 Eric Axley,4,338,Bermuda,1,12,765
 Satoshi Kodaira,31,338,Pebble Beach,2,9,005
 Rico Hoey,2,338,Sony Open,2,18,006
 Patrick Flavin,2,338,Phoenix Open,2,2,510
-Jake Kneen,2,338,3M Open,2,12,883
+Carl Yuan,6,337,WGC-HSBC Champ,1,14,766
+Cole Miller,2,337,The RSM Classic,2,4,889
 Vijay Singh,18,337,Sony Open,1,16,006
 J.J. Henry,23,337,Bermuda,1,12,765
-Cole Miller,2,337,The RSM Classic,2,4,889
-Carl Yuan,6,337,WGC-HSBC Champ,1,14,766
+Chandler Phillips,10,336,Houston Open,3,2,729
+Daniel Wetterich,2,336,Honda Classic,2,9,734
 Ben Crane,17,336,The Greenbrier,2,6,771
 Kevin Stadler,22,336,Pebble Beach,1,10,769
 Camilo Villegas,2,336,Honda Classic,2,12,734
+Braden Thornberry,2,336,Sanderson Farms,1,5,746
 Kevin Yu,2,336,Arnold Palmer,1,18,009
 Sebastian Soderberg,4,336,WGC-FedEx,1,9,513
 Zecheng Dou,4,336,WGC-HSBC Champ,3,18,766
-Braden Thornberry,2,336,Sanderson Farms,1,5,746
-Chandler Phillips,10,336,Houston Open,3,2,729
-Daniel Wetterich,2,336,Honda Classic,2,9,734
 Sean Yu,2,335,Genesis,1,1,500
+Donnie Trosper,4,334,Rocket Mortgage,2,10,876
+Braden Bailey,4,334,Houston Open,1,8,729
 Byron Meth,2,334,Safeway Open,1,3,552
 Davis Riley,8,334,Sanderson Farms,3,9,746
 Sean O'Hair,6,334,Pebble Beach,2,10,769
-Donnie Trosper,4,334,Rocket Mortgage,2,10,876
-Braden Bailey,4,334,Houston Open,1,8,729
 Ricky Barnes,34,333,Rocket Mortgage,1,14,876
 David Hearn,55,333,Pebble Beach,3,9,005
 Michael Sims,2,333,Bermuda,2,2,765
@@ -366,14 +366,14 @@ Andrew McCain,2,328,Honda Classic,1,12,734
 Garrett Osborn,4,328,Sanderson Farms,1,16,746
 Rich Beem,8,328,Houston Open,2,15,729
 Frank Lickliter II,2,328,Bermuda,2,2,765
+Justin Bertsch,6,327,PGA Champ,1,18,895
+Spencer Ralston,2,327,RBC Heritage,1,3,012
 Ted Purdy,10,327,Bermuda,1,12,765
 Brendon de Jonge,14,327,Sanderson Farms,2,18,746
 Rod Perry,6,327,Arnold Palmer,3,16,009
 Ryan Blaum,10,327,The Greenbrier,1,6,771
 Ryuko Tokimatsu,2,327,Sony Open,2,16,006
 Alvaro Ortiz,4,327,Mayakoba,2,13,733
-Justin Bertsch,6,327,PGA Champ,1,18,895
-Spencer Ralston,2,327,RBC Heritage,1,3,012
 Justin Suh,13,326,Sanderson Farms,1,5,746
 Joost Luiten,8,326,WGC-HSBC Champ,3,18,766
 Andrea Pavan,6,326,WGC-HSBC Champ,3,18,766
@@ -397,24 +397,24 @@ Mike Weir,2,320,Bermuda,1,12,765
 Bob Sowards,2,320,PGA Champ,1,4,895
 Kyongjun Moon,6,320,Genesis,2,3,500
 Aaron Crawford,2,320,3M Open,1,1,883
+Harry Hall,2,319,Farmers,1,9,004
 Ben Cook,2,319,PGA Champ,1,4,895
 Toru Nakajima,2,319,Sony Open,2,1,006
 Jason Caron,2,319,PGA Champ,1,4,895
-Harry Hall,2,319,Farmers,1,9,004
 Joe Boros,2,318,The Greenbrier,2,17,771
 Daniel Balin,2,318,PGA Champ,2,10,895
 Matt Atkins,2,318,The RSM Classic,2,10,776
 Henrik Stenson,14,317,Arnold Palmer,2,16,009
-Carlos Franco,6,316,Bermuda,1,12,765
-WC Liang,4,316,WGC-HSBC Champ,1,18,766
 Eugenio Lopez-Chacarra,2,316,Mayakoba,1,13,733
 Michael Perras,2,316,Houston Open,2,2,729
+Carlos Franco,6,316,Bermuda,1,12,765
+WC Liang,4,316,WGC-HSBC Champ,1,18,766
+Mike Auterson,2,315,PGA Champ,2,18,895
 Ryan Vermeer,2,315,PGA Champ,2,14,895
 Julián Etulain,4,315,Puerto Rico,3,2,742
 John O'Leary,2,315,PGA Champ,2,14,895
 David Muttitt,2,315,PGA Champ,2,18,895
 Stephan Jaeger,2,315,Sanderson Farms,1,16,746
-Mike Auterson,2,315,PGA Champ,2,18,895
 Mark Wilson,5,314,Bermuda,2,2,765
 Heath Slocum,2,314,Bermuda,2,2,765
 Will MacKenzie,2,313,Bermuda,1,2,765
@@ -423,9 +423,9 @@ Stuart Smith,2,313,Safeway Open,2,3,552
 Martin Kaymer,4,313,PGA Champ,1,4,895
 Jimmy Stanger,2,313,Mayakoba,2,13,733
 Jacob Bergeron,2,313,Farmers,1,18,104
+Justin Doeden,2,312,Puerto Rico,1,2,742
 Brinson Paolini,4,312,Wyndham,1,5,752
 Jonathan Kaye,4,312,Bermuda,1,2,765
-Justin Doeden,2,312,Puerto Rico,1,2,742
 Gary Nicklaus,2,311,Bermuda,1,2,765
 Ken Tanigawa,2,311,PGA Champ,1,4,895
 Rob Labritz,2,311,PGA Champ,1,4,895
@@ -435,8 +435,8 @@ Sebastián Vázquez,2,311,Mayakoba,2,13,733
 Andrew Loupe,2,311,Puerto Rico,2,2,742
 Dru Love,2,310,The RSM Classic,1,5,776
 Alex Knoll,2,310,PGA Champ,2,18,895
-"Efren Serna, Jr.",2,309,Mayakoba,2,13,733
 Scott de Borba,3,309,Pebble Beach,1,3,005
+"Efren Serna, Jr.",2,309,Mayakoba,2,13,733
 Domenico Geminiani,2,308,Puerto Rico,2,2,742
 Yosuke Asaji,8,308,WGC-HSBC Champ,4,14,766
 Daniel Nisbet,4,308,WGC-HSBC Champ,4,14,766
@@ -458,8 +458,8 @@ Chris Nido,2,303,Puerto Rico,2,2,742
 Brian Davis,8,302,Bermuda,1,2,765
 Bryce Easton,4,301,WGC-HSBC Champ,1,14,766
 Parker Gillam,2,301,Puerto Rico,2,2,742
-Ben Silverman,2,300,Mayakoba,2,13,733
 Greyson Sigg,2,300,The RSM Classic,2,11,776
+Ben Silverman,2,300,Mayakoba,2,13,733
 Guy Boros,2,300,Bermuda,1,12,765
 Judd Gibb,2,300,PGA Champ,2,14,895
 Jay McLuen,4,298,Puerto Rico,2,2,742
