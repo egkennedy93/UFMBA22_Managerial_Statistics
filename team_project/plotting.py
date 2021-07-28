@@ -8,42 +8,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
-
-# plot_df = merging_datasets.final_merge
-# sns.lmplot(data = plot_df, y='EARNINGS', x='RK')
-
-# y = plot_df['EARNINGS']
-# x = plot_df['RK']
-
-
-# plt.ticklabel_format(useOffset=False, style='plain')
-# plt.yticks()
-# plt.yticks(np.arange(0,8000000,1000000.0))
-# # plt.yticks(np.arange(min(y), max(y)+1, 5.0))
-
-
+# the plot DataFrame
 plot_df = merging_datasets.final_merge
 
-val = 'TOTAL SPIN SPEED'
-
+#holding variable for the independent variables
+val = 'TOTAL CLUB HEAD SPEED'
+#validating that all values are numeric
 plot_df[val] = pd.to_numeric(plot_df[val])
+#building the scatterplot
 ax = sns.scatterplot(data = plot_df, y='EARNINGS', x=val, hue='PLAYER', palette='rocket')
 sns.regplot(data = plot_df, y='EARNINGS', x=val, scatter=False, ax=ax)
 plt.legend(bbox_to_anchor=(1,1))
 
-
-
-
+#setting the x and y variables 
 y = plot_df['EARNINGS']
 x = plot_df[val]
 
-
+#formatting the plot
 plt.ticklabel_format(useOffset=False, style='plain')
 plt.yticks()
 plt.yticks(np.arange(0,8000000,1000000.0))
 
-
+#saving to a PNG file
 plt.savefig(val+'.png', format='png', facecolor='w', edgecolor='w', transparent='false', bbox_inches='tight', dpi=750)
 
 

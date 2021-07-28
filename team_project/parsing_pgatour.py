@@ -88,6 +88,8 @@ def parse_menu(endpoint, data_name):
     golfer_df = DataFrame(holder)
     golfer_df.columns = columns
 
+    # this is cleaning up a bunch of data points that had the incorrect data format and 
+    # had duplicate names to other fields so I overwrite the field name by appending the dataset name to the field
     new_avg = "{}_AVG".format(data_name)
     new_round = "{}_ROUNDS".format(data_name)
     new_fast_speed = "{}_FASTEST SPEED".format(data_name)
@@ -98,7 +100,7 @@ def parse_menu(endpoint, data_name):
     new_putts_made = "{}_PUTTS_MADE".format(data_name)
     new_total_attempts = "{}_TOTAL ATTEMPTS".format(data_name)
     
-
+    # applying the renames
     golfer_df.rename(columns={'PLAYER NAME': "PLAYER"}, inplace=True)
     golfer_df.rename(columns={'AVG.': new_avg.upper()}, inplace=True)
     golfer_df.rename(columns={'ROUNDS': new_round.upper()}, inplace=True)
@@ -111,8 +113,11 @@ def parse_menu(endpoint, data_name):
     golfer_df.rename(columns={'% MADE': new_percent_made.upper()}, inplace=True)
     golfer_df.rename(columns={'TOTAL ATTEMPTS': new_total_attempts.upper()}, inplace=True)
 
+    # certain fields weren't necessary
     del golfer_df['\n                                RANK LAST WEEK']
     del golfer_df['RANK\xa0THIS WEEK']
+    
+    #saving the final fomrat to a CSV file
     dir_path = os.path.dirname(os.path.realpath(__file__))
     save_path = dir_path+'/DataSets/PGA_stats_{}.csv'.format(data_name)
     golfer_df.to_csv(save_path, index = False, sep=',', encoding='utf-8-sig')

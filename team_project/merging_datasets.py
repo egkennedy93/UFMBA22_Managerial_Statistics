@@ -4,12 +4,16 @@ import os
 import pandas as pd
 from pandas import DataFrame
 
+"""
+This file is used to merge all of the data sets together into one large dataset
+I could of done this in a cleaner way, but was time constrained.
+"""
+
+#Calling the DataFrames from the other scripts
 espn_data = parsing_espn.espn_scrape()
 pga_data = parsing_pgatour.ball_speed
 
-
-
-
+#merging files onto eachother to build a large dataset
 merg_espn_test = pd.merge(espn_data, pga_data, on=['PLAYER'])
 merge2 = pd.merge(merg_espn_test, parsing_pgatour.Driving_distance, on=['PLAYER'])
 merge3 = pd.merge(merge2, parsing_pgatour.spin_rate, on=['PLAYER'])
@@ -23,9 +27,10 @@ merge10 = pd.merge(merge9, parsing_pgatour.inside_15_20,  on=['PLAYER'])
 merge11 = pd.merge(merge10, parsing_pgatour.inside_20_25,  on=['PLAYER'])
 
 
-
+#setting a final_merge variable so it can be referenced in plotting.py
 final_merge = merge11
 final_merge.replace(',', '', regex=True, inplace=True)
 
+#creating a CSV
 dir_path = os.path.dirname(os.path.realpath(__file__))
 final_merge.to_csv(dir_path+'/DataSets/PGA_2020_Stats.csv', index=False, sep=',', encoding='utf-8-sig')
